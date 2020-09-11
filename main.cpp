@@ -6,7 +6,7 @@
 using namespace std;
 
 // This is Post machine simulator made by
-// Strizhkin Denis for studying perposes
+// Strizhkin Denis for studying purposes
 // 11th September 2020
 
 // Funtion declaration
