@@ -67,6 +67,9 @@ int main()
 			case 's':
 				cout << "Programm have finished\n\n";
 				return 0;
+			default:
+				cout << "Error: Unexpected symbol\n\n";
+                                return 0;
 		}
 		this_thread::sleep_for(1s);
 	}
@@ -81,8 +84,9 @@ void programmStart(string &str, vector <string> &prog, int &j, ifstream &file)
 	getline(file, temp);
 	while (temp != "progEnd")
 	{
-		prog.push_back(temp.substr(2));
-		getline(file, temp);
+		int indOfCB = temp.find(')');
+                prog.push_back(temp.substr(indOfCB + 1));
+                getline(file, temp);
 	}
 	cout << "prog ok\n";
 	getline(file, str);
